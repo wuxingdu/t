@@ -29,8 +29,24 @@ npm run dev
 
 ## Deploy
 
-Push the repository to GitHub and connect it to Vercel. Vercel will run:
+This repository includes a GitHub Actions workflow for Vercel deployments:
+
+- Push to `main`: production deployment
+- Pull request: preview deployment
+- Manual run: available from the Actions tab
+
+Add these repository secrets in GitHub before running the workflow:
+
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
+
+You can get `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` after linking the project locally with Vercel; they are stored in `.vercel/project.json`. Do not commit `.vercel/`.
+
+The workflow runs:
 
 ```bash
-npm run build
+vercel pull
+vercel build
+vercel deploy --prebuilt
 ```
