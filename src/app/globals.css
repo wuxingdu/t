@@ -68,8 +68,8 @@ img {
   max-width: calc(var(--max) + 48px);
   margin: 0 auto;
   padding: 1rem 1.5rem;
-  background: linear-gradient(180deg, rgba(247, 240, 229, 0.9), rgba(247, 240, 229, 0.42) 72%, transparent);
-  border-bottom: 1px solid rgba(17, 16, 14, 0.1);
+  background: linear-gradient(180deg, rgba(247, 240, 229, 0.92), rgba(247, 240, 229, 0.38) 76%, transparent);
+  border-bottom: 0;
   backdrop-filter: blur(8px);
 }
 
